@@ -1,0 +1,460 @@
+html {
+	scroll-behavior: smooth;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+h2{ /* All h2 tags */
+  font-size: 50px;
+}
+
+/* This is the reveal css style to fade the items when scrolling and with js script in reveal function */
+.reveal{
+  position: relative;
+  transform: translateY(80px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/** Primary Section: Start **/
+.primary-section{ /* When use a class element .hero is the way */ 
+    background-color: #1E1842 ;
+    height: 100vh; /* 100% vh - view port height */
+    color: white;
+    font-size: 40px;
+    position: relative;
+}
+
+nav{
+  display: flex; /* Make the nav bar inline rather stacked */
+  justify-content: space-between; 
+  /* Putting or justifying the content such as "About me","Projects", "Contact"
+  with a space */
+  justify-content: right;
+  margin-right: 50px;
+}
+nav ul li :hover{
+  opacity: 0.8;
+}
+
+ul{
+  display: flex; /* Make the nav bar inline rather stacked */
+  list-style-type: none; /* Removes the " . " in the list */
+  width: 600px;
+  justify-content: space-around;
+  font-size: 30px;
+}
+
+.animation-gif{
+    width: 400px;
+    margin-bottom: 200px;
+    border-radius: 10px;
+    margin-left: 50px;
+}
+
+nav ul li a{ /* Navigation bar Items */
+  text-decoration: none;
+  color: white;
+}
+.sasa-area{
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.sasa-text{ /* Primary Section Sasanka Perera and Full stack developer positions */
+  margin-left: 80px;
+  margin-bottom:120px;
+}
+
+h1{ /* Primary Section "Sasanka Perera" */
+  font-size: 80px;
+  margin: 0;
+  font-weight: 600;
+}
+
+p{ /* Primary Section "Full stack developer" */
+  margin: 0;
+  font-size: 30px;
+  font-weight: 400;
+}
+.button{
+  width: 195px;
+  height: 50px;
+  background-color: coral;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 500;
+  padding-top: 15px;
+  margin-top: 20px;
+}
+
+.button:hover{
+  background-color: #ef744b;
+}
+
+.button:active{
+  background-color: #a9a9a9;
+  color: #808080;
+}
+.button a{ /* Specifically button configuration on anchor tag */
+  text-decoration: none;
+  color: white;
+}
+
+.scroll-down{/* Scroll Animation-start */
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  bottom: 30px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.scroll-down::before,
+.scroll-down::after{
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  border: 2px solid white;
+  height: 10px;
+  width: 10px;
+  transform: translate(-50%,-100%) rotate(45deg);
+  border-top: transparent;
+  border-left: transparent;
+  animation: scroll-down 1s ease-in-out infinite;
+}
+
+.scroll-down::after{
+  top:30%;
+  animation-delay: 0.3s;
+}
+
+@keyframes scroll-down{
+  0%{
+    opacity: 0;
+  }
+  30%{
+    opacity: 1;
+  }
+  60%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+    top: 90%;
+  }
+}/* Scroll Animation-end */
+
+/* Media Configuration */
+
+
+/** Primary Section: End **/
+
+
+/** About Me Section: Start **/
+.sub-section-aboutme{
+    background-color:lightgrey;
+    display: flex;
+    justify-content: space-around;
+    padding: 90px;
+    margin-top: 0.5%;
+}
+
+.myimage{
+  width: 480px;
+  margin-bottom: 120px;
+  margin-left: 10px;
+  border-radius: 10px;
+  border: 3px solid aliceblue;
+}
+
+.information-p{
+  font-weight: 400;
+  font-size: 24px;
+  text-align: justify;
+  text-justify:distribute
+}
+
+.myimage-container{
+  display: flex;
+  align-items: center;
+}
+/** About Me Section: End **/
+
+/** Education and Experience Section: Start **/
+.section-about-me-continued{
+    background-color:lightgrey;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    height: 100vh;
+    margin-top: 0.5%; /* White gap configuration on each section */
+    padding:50px;
+}
+/** Education and Experience Section: End **/
+
+/** Work Section: Start **/
+.sub-section-work{
+    background-color:white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 100px;
+    margin-top: 0.5%;
+}
+
+.subtext{
+  font-size: 15px;
+  font-weight: 300;
+}
+.project-image{
+  width: 310px;
+  margin-top: 25px;
+  border-radius: 10px;
+}
+
+
+@media only screen and (max-width:1000px) {
+
+  .work-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+}
+
+.work-card{
+    width: 350px;
+    height: 400px;
+    box-shadow: 5px 5px 20px rgb(147, 147, 147);
+    border-radius: 10px;
+    margin: 10px;
+}
+
+hr{ /* Hair line in the card */
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.project-link{
+  text-decoration: none;
+  color: black;
+
+}
+
+.work-container{
+    display: flex;
+    justify-content: space-around;
+}
+/** Work Section: End **/
+
+
+/** Contact/fotter Section: Start **/
+.sub-section-contact{
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  height: 100vh; /* 100% vh - view port height */
+  color: aliceblue;
+  margin-top: 0.5%;
+  align-items: center;
+  justify-content: center;
+}
+
+::selection{
+  color: #fff;
+  background: #0D6EFD;
+}
+.wrapper{
+  width: 900px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.05);
+}
+.wrapper header{
+  font-size: 22px;
+  font-weight: 600;
+  padding: 20px 30px;
+  border-bottom: 1px solid #ccc;
+}
+.wrapper form{
+  margin: 35px 30px;
+}
+.wrapper form.disabled{
+  pointer-events: none;
+  opacity: 0.7;
+}
+form .dbl-field{
+  display: flex;
+  margin-bottom: 25px;
+  justify-content: space-between;
+}
+.dbl-field .field{
+  height: 50px;
+  display: flex;
+  position: relative;
+  width: calc(100% / 2 - 13px);
+}
+.wrapper form i{
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  color: #ccc;
+  font-size: 17px;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+form .field input,
+form .message textarea{
+  width: 100%;
+  height: 100%;
+  outline: none;
+  padding: 0 18px 0 48px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+.field input::placeholder,
+.message textarea::placeholder{
+  color: #ccc;
+}
+.field input:focus,
+.message textarea:focus{
+  padding-left: 47px;
+  border: 2px solid #0D6EFD;
+}
+.field input:focus ~ i,
+.message textarea:focus ~ i{
+  color: #0D6EFD;
+}
+form .message{
+  position: relative;
+}
+form .message i{
+  top: 30px;
+  font-size: 20px;
+}
+form .message textarea{
+  min-height: 130px;
+  max-height: 230px;
+  max-width: 500px;
+  min-width: 100px;
+  padding: 15px 20px 0 48px;
+}
+form .message textarea::-webkit-scrollbar{
+  width: 0px;
+}
+.message textarea:focus{
+  padding-top: 14px;
+}
+form .button-area{
+  margin: 25px 0;
+  display: flex;
+  align-items: center;
+}
+.button-area button{
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 13px 25px;
+  background: #0D6EFD;
+  transition: background 0.3s ease;
+}
+.button-area button:hover{
+  background: #025ce3;
+}
+.button-area span{
+  font-size: 17px;
+  margin-left: 30px;
+  display: none;
+}
+
+@media (max-width: 600px){
+  .wrapper header{
+    text-align: center;
+  }
+  .wrapper form{
+    margin: 35px 20px;
+  }
+  form .dbl-field{
+    flex-direction: column;
+    margin-bottom: 0px;
+  }
+  form .dbl-field .field{
+    width: 100%;
+    height: 45px;
+    margin-bottom: 20px;
+  }
+  form .message textarea{
+    resize: none;
+  }
+  form .button-area{
+    margin-top: 20px;
+    flex-direction: column;
+  }
+  .button-area button{
+    width: 100%;
+    padding: 11px 0;
+    font-size: 16px;
+  }
+  .button-area span{
+    margin: 20px 0 0;
+    text-align: center;
+  }
+}
+
+.footer-basic {
+  padding:0;
+  background-color:transparent;
+  color:#4b4c4d;
+}
+
+.footer-basic .social {
+  text-align:center;
+  padding-top:25px ;
+  padding-bottom:25px;
+}
+
+.footer-basic .social > a {
+  font-size:24px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+  border-radius:10px;
+  border:1px solid #aaa;
+  margin:0 8px;
+  color:#aaa;
+}
+
+.footer-basic .social > a:hover {
+  opacity:0.7;
+}
+
+.footer-basic .copyright {
+  margin-top:15px;
+  text-align:center;
+  font-size:13px;
+  color:#aaa;
+  margin-bottom:20px;
+}
+/** Contact/fotter Section: End **/

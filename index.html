@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <link rel="stylesheet" href="src/style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <title>Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+        <body>
+            <section class = "primary-section" id="home">
+                <nav>
+                    <ul>
+                        <li><a href="#about-me">About Me</a></li>
+                        <li><a href="#work">Work</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="src/files/YourCV.pdf" target="_blank" rel="noopener noreferrer">Resume</a></li>
+                    </ul>
+                </nav>
+                <div class="sasa-area">
+                    <div class="sasa-text">
+                      <h1>Hi 
+                        I'm First Name</h1>
+                      <p>Full Stack Developer</p>
+                      <div class="button"><a href="#contact">Contact Me</a></div>
+                    </div>
+                    <img class = "myimage" src="src/images/182331-middle.png" alt=""/>
+                    <div><a href="#about-me" class="scroll-down"></a></div>
+                </div>                
+            </section>
+
+            <section class ="sub-section-aboutme reveal" id="about-me">
+                <div class="information">
+                    <h2>About Me</h2>
+                    <p class="information-p">Hello, Your name. Express about youself what are the specialities what skills you can put to the field and what makes you to choose this field.  
+                    </p>
+                  </div>
+                <div class="myimage-container">
+                  <img class="animation-gif" src="src/images/full-stack-development.gif">
+                </div>
+            </section>
+
+            <section class="section-about-me-continued reveal" id="more-about-me" >
+              <h2>Education</h2>
+              <h2>Experience</h2>
+            </section>
+
+            <section class="sub-section-work reveal" id="work">
+                <h2>Work</h2>
+                <div class="work-container">
+
+                    <div class="work-card">
+                      <img class="project-image" src="src/images/coding-man.jpg" alt="" />
+                      <h3>Project 1</h3>
+                      <p class="subtext">Project 1 Description to explain the projects inputs outputs and buisness problem and solution.</p>
+                      <hr/>
+                      <p class="subtext"><a class="project-link" href="https://github.com" target="_blank" rel="noopener noreferrer">View here</a></p>
+                    </div>
+
+
+                    <div class="work-card">
+                      <img class="project-image" src="src/images/coding-man.jpg" alt="" />
+                      <h3>Project 2</h3>
+                      <p class="subtext">Project 2 Description to explain the projects inputs outputs and buisness problem and solution.</p>
+                      <hr/>
+                      <p class="subtext"><a class="project-link" href="https://github.com" target="_blank" rel="noopener noreferrer">View here</a></p>
+                    </div>
+
+
+                    <div class="work-card">
+                      <img class="project-image" src="src/images/coding-man.jpg" alt="" />
+                      <h3>Project 3</h3>
+                      <p class="subtext">Project 3 Description to explain the projects inputs outputs and buisness problem and solution.</p>
+                      <hr/>
+                      <p class="subtext"><a class="project-link" href="https://github.com" target="_blank" rel="noopener noreferrer">View here</a></p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="sub-section-contact reveal" id="contact">
+                <h2>Contact Me</h2>
+                <div class="wrapper">
+                    <form action="https://formsubmit.co/your receiving email" method="POST">
+                      <input type="hidden" name="_next" value="http://127.0.0.1:5500/src/Thankyou.html">
+                      <div class="dbl-field">
+                        <div class="field">
+                          <input type="text" name="name" placeholder="Enter your name" required>
+                          <i class='fas fa-user'></i>
+                        </div>
+                        <div class="field">
+                          <input type="text" name="email" placeholder="Enter your email" required>
+                          <i class='fas fa-envelope'></i>
+                        </div>
+                      </div>
+                      <div class="dbl-field">
+                        <div class="field">
+                          <input type="text" name="phone" placeholder="Enter your phone" required>
+                          <i class='fas fa-phone-alt'></i>
+                        </div>
+                        <div class="field">
+                          <input type="text" name="website" placeholder="Enter your website">
+                          <i class='fas fa-globe'></i>
+                        </div>
+                      </div>
+                      <div class="message">
+                        <textarea placeholder="Write your message" name="message" required></textarea>
+                        <i class="material-icons">message</i>
+                      </div>
+
+
+                      
+                      <div class="button-area">
+                        <button type="submit">Send Message</button>
+                        <span></span>
+                      </div>
+                    </form>
+                  </div>                  
+                <div class="footer-basic">
+               
+                      <div class="social">
+                        <a href="#sub-section-contact reveal" onclick="alert('your email')"><i class="icon ion-social-google"></i></a>
+                        <a href="http://www.linkedin.com/"  target="_blank" rel="noopener noreferrer"><i class="icon ion-social-linkedin"></i></a>
+                        <a href="http://github.com/"  target="_blank" rel="noopener noreferrer"><i class="icon ion-social-github"></i></a>
+                      </div>
+                      <p class="copyright">© 2022 First Name Last Name. All rights reserved.</p>
+                </div>         
+            </section>
+            <script src="src/app.js"></script>
+        </body>
+</html>
